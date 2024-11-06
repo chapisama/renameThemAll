@@ -23,20 +23,18 @@ To install the scripts available in this repository for Autodesk Maya and Substa
 - Open the script editor in Maya.
 - Add a Python tab.
 - Paste the following code into the Python tab:
-
-`from renameThemAll import main_ui as main`
-
-`def launch_ui():  `  
- `try:`
-` main.RenameThemAllUI.close()  # pylint: disable=E0601`
-` main.RenameThemAllUI.deleteLater()`
-`except:`
-`pass`
-`renameThemAll = main.RenameThemAllUI()`
-`renameThemAll.show()`
-
-`if __name__ == "__main__":`
-`launch_ui()`
+``` 
+from renameThemAll import main_ui as main
+def launch_ui():
+try:
+  main.RenameThemAllUI.close() # pylint: disable=E0601
+  main.RenameThemAllUI.deleteLater()
+except:
+  pass
+renameThemAll = main.RenameThemAllUI()
+renameThemAll.show()
+``` 
+ 
 
 - Save the Python tab. (file > save script to shelf)
 
