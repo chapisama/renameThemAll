@@ -26,11 +26,11 @@ To install the scripts available in this repository for Autodesk Maya and Substa
 ``` 
 from renameThemAll import main_ui as main
 def launch_ui():
-try:
-  main.RenameThemAllUI.close() # pylint: disable=E0601
-  main.RenameThemAllUI.deleteLater()
-except:
-  pass
+  try:
+    main.RenameThemAllUI.close() # pylint: disable=E0601
+    main.RenameThemAllUI.deleteLater()
+  except:
+    pass
 renameThemAll = main.RenameThemAllUI()
 renameThemAll.show()
 ``` 
