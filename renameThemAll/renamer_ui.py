@@ -669,27 +669,27 @@ class RenamerUI(QDialog):
         self.gbox_short_name.setLayout(self.short_name_layout)
 
     def create_widget_hidden_categories(self) -> None:
-        hidden_categories = ""
+        self.hidden_categories = ""
         if "type" not in USED_CATEGORIES:
-            hidden_categories += "Type, "
+            self.hidden_categories += "Type, "
         if "zoning" not in USED_CATEGORIES:
-            hidden_categories += "Zoning, "
+            self.hidden_categories += "Zoning, "
         if "orientation" not in USED_CATEGORIES:
-            hidden_categories += "Orientation, "
+            self.hidden_categories += "Orientation, "
         if "alphabetical_inc" not in USED_CATEGORIES and "numerical_inc" not in USED_CATEGORIES:
-            hidden_categories += "Increments, "
+            self.hidden_categories += "Increments, "
         elif "alphabetical_inc" not in USED_CATEGORIES:
-            hidden_categories += "Alphabetical increment, "
+            self.hidden_categories += "Alphabetical increment, "
         elif "numerical_inc" not in USED_CATEGORIES:
-            hidden_categories += "Numerical increment, "
+            self.hidden_categories += "Numerical increment, "
         if "symmetry" not in USED_CATEGORIES:
-            hidden_categories += "Symmetry, "
+            self.hidden_categories += "Symmetry, "
 
-        if hidden_categories:
-            hidden_categories = hidden_categories[:-2]
+        if self.hidden_categories:
+            self.hidden_categories = self.hidden_categories[:-2]
         
-        if hidden_categories:
-            self.lbl_hidden_categories = QLabel(f"Hidden options: {hidden_categories}. These options are not displayed in the outliner because they are not present in the name structure. (Config / Configuration / Create preset / Name structure)")
+        if self.hidden_categories:
+            self.lbl_hidden_categories = QLabel(f"Hidden options: {self.hidden_categories}. These options are not displayed in the outliner because they are not present in the name structure. (Config / Configuration / Create preset / Name structure)")
             self.lbl_hidden_categories.setWordWrap(True)
            
 
@@ -944,7 +944,8 @@ class RenamerUI(QDialog):
             if "alphabetical_inc" in USED_CATEGORIES or "numerical_inc" in USED_CATEGORIES:
                 self.gbox_increment.setVisible(True)
             self.gbox_short_name.setVisible(True)
-            self.gbox_hidden_categories.setVisible(True)
+            if self.hidden_categories:
+                self.gbox_hidden_categories.setVisible(True)
             if "symmetry" in USED_CATEGORIES:
                 self.gbox_symmetry.setVisible(True)
             self.lexicon_ui.setVisible(False)
@@ -958,7 +959,8 @@ class RenamerUI(QDialog):
             if "alphabetical_inc" in USED_CATEGORIES or "numerical_inc" in USED_CATEGORIES:
                 self.gbox_increment.setVisible(False)
             self.gbox_short_name.setVisible(False)
-            self.gbox_hidden_categories.setVisible(False)
+            if self.hidden_categories:
+                self.gbox_hidden_categories.setVisible(False)
             if "symmetry" in USED_CATEGORIES:
                 self.gbox_symmetry.setVisible(False)
             self.lexicon_ui.setVisible(True)
