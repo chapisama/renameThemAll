@@ -1,0 +1,11 @@
+QTreeWidget::item:hover {
+    background-color: #222222;
+}
+
+QTreeView::item:selected {
+    background-color: #5285a6;
+}
+
+QTreeView::item[ancestor="true"] {
+    background-color: rgba(136, 136, 167, 0.5);
+}

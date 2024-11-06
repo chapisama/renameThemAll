@@ -1,0 +1,54 @@
+{
+    "last_preset": "test",
+    "presets": {
+        "test": {
+            "structure": "",
+            "main_group": "",
+            "group_types": {},
+            "mesh_types": {},
+            "zoning": {
+                "Left": "Lt",
+                "Center": "Ct",
+                "Right": "Rt",
+                "Top": "Tp",
+                "Middle": "Md",
+                "Bottom": "Bt",
+                "Front": "Ft",
+                "Back": "Bk"
+            },
+            "orientation": {
+                "North": "Nt",
+                "West": "Wt",
+                "East": "Et",
+                "South": "St"
+            },
+            "symmetry": {
+                "Left": "L",
+                "Right": "R"
+            },
+            "checkbox_entries": {
+                "type": true,
+                "zoning": true,
+                "orientation": true,
+                "symmetry": true
+            },
+            "n_inc_lenght": 3
+        },
+        "testB": {
+            "structure": "",
+            "main_group": "",
+            "group_types": {},
+            "mesh_types": {},
+            "zoning": {},
+            "orientation": {},
+            "symmetry": {},
+            "checkbox_entries": {
+                "type": false,
+                "zoning": true,
+                "orientation": true,
+                "symmetry": true
+            },
+            "n_inc_lenght": 3
+        }
+    }
+}

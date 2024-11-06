@@ -1,0 +1,37 @@
+{
+    "test": {
+        "groups": [
+            "arm",
+            "axisArm",
+            "button",
+            "disk",
+            "element",
+            "lid",
+            "test",
+            "turntable"
+        ],
+        "meshes": [
+            "arm",
+            "attach",
+            "attachArm",
+            "attachBody",
+            "attachLid",
+            "axisArm",
+            "body",
+            "body3",
+            "body4",
+            "brand",
+            "button",
+            "counterweight",
+            "disk",
+            "head",
+            "lid",
+            "plate",
+            "plateArm",
+            "protection",
+            "socket",
+            "socleDisk",
+            "test"
+        ]
+    }
+}
