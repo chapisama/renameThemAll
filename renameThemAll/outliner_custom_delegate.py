@@ -7,9 +7,9 @@ except ImportError:
     from PySide2.QtGui import QTextDocument, QIcon, QPainter
     from PySide2.QtWidgets import QStyledItemDelegate, QAbstractItemView, QStyleOptionViewItem, QStyle, QComboBox
 
-    from renameThemAll.constants import OBJ_TYPE_DICT
-    from renameThemAll.outliner_text_colored import OutlinerTextColored
-    from renameThemAll.name_structure_inspector import NameStructureInspector
+from renameThemAll.constants import OBJ_TYPE_DICT
+from renameThemAll.outliner_text_colored import OutlinerTextColored
+from renameThemAll.name_structure_inspector import NameStructureInspector
 
 
 class CustomItemDelegate(QStyledItemDelegate):
